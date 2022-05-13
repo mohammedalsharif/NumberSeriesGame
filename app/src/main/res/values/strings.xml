@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">NumberSeriesGame</string>
+    <string name="str_full_name">Full name</string>
+    <string name="str_Email">Email address</string>
+    <string name="str_Register">Register</string>
+    <string name="str_UserName">UserName</string>
+    <string name="str_Password">Password</string>
+    <string name="str_BirthDate">BirthDay</string>
+    <string name="str_Male">Male</string>
+    <string name="str_Female">Female</string>
+    <string name="str_Save">Save</string>
+    <string name="str_Login">Login</string>
+    <string name="str_Question">\??</string>
+    <string name="str_score">Score</string>
+    <string name="str_Check">Check</string>
+    <string name="str_NewGame">New Game</string>
 </resources>
