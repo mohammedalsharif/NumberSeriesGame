@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="str_full_name">الاسم الكامل</string>
+    <string name="str_Email">عنوان بريد الكتروني</string>
+    <string name="str_Register">تسجيل جديد</string>
+    <string name="str_UserName">اسم االمستخدم</string>
+    <string name="str_Password">كلمه السر</string>
+    <string name="str_BirthDate">تاريخ الميلاد</string>
+    <string name="str_Male">ذكر</string>
+    <string name="str_Female">أنثى</string>
+    <string name="str_Save">حفظ</string>
+    <string name="str_Login">تسجيل الدخول</string>
+    <string name="str_Question">\؟؟</string>
+    <string name="str_score">نتيجة</string>
+    <string name="str_Check">تحقق</string>
+    <string name="str_NewGame">لعبة جديدة</string>
+    <string name="str_great">عظيم !</string>
+    <string name="str_wrong_num">رقم غير صحيح</string>
+    <string name="str_setting">إعدادات</string>
+    <string name="str_logout">تسجيل خروج</string>
+    <string name="str_showAllGames">عرض كل الألعاب</string>
+    <string name="str_showLastGame">عرض آخر لعبة</string>
+    <string name="str_ChangePassword">غير كلمة السر</string>
+    <string name="str_ClearGameHistory">مسح محفوظات اللعبة</string>
+    <string name="str_NewPass">أدخل كلمة مرور جديدة</string>
+    <string name="noRegiGames">لا توجد ألعاب مسجلة</string>
+    <string name="str_removed">تمت إزالة جميع الألعاب</string>
+    <string name="str_noRegGame">لا توجد ألعاب مسجلة</string>
+    <string name="str_passChanged">تم تغيير كلمة السر</string>
+    <string name="str_PleasEnNewPass">الرجاء إدخال كلمة مرور جديدة</string>
+    <string name="str_PFullAllData">الرجاء ملء كل الحقول</string>
+    <string name="incorrectUserOrPass">كلمة السر أو اسم المستخدم غير صحيحة</string>
+    <string name="str_PfullALl">الرجاء ملء كل الحقول</string>
+    <string name="str_theGame">اللعبة</string>
+    <string name="str_welcome">أهلا بك....</string>
+    <string name="str_enter_a_number">أدخل رقما</string>
+    <string name="str_remember_me">تذكرنى؟</string>
+    <string name="str_P_EnterNum">الرجاء إدخال الرقم</string>
+    <string name="str_P_Click_NGame">الرجاء الضغط على لعبة جديدة</string>
+    <string name="str_Qes_Over">انتهت الأسئلة</string>
+
+    <string-array name="countries">
+        <item>فلسطين</item>
+        <item>مصر</item>
+    </string-array>
+</resources>
