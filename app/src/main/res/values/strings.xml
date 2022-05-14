@@ -14,4 +14,33 @@
     <string name="str_score">Score</string>
     <string name="str_Check">Check</string>
     <string name="str_NewGame">New Game</string>
+    <string name="str_great">Great !</string>
+    <string name="str_wrong_num">wrong number</string>
+    <string name="str_setting">Settings</string>
+    <string name="str_logout">Logout</string>
+    <string name="str_showAllGames">Show All Games</string>
+    <string name="str_showLastGame">Show Last Game</string>
+    <string name="str_ChangePassword">Change Password</string>
+    <string name="str_ClearGameHistory">Clear Game History</string>
+    <string name="str_NewPass">Enter New Password</string>
+    <string name="noRegiGames">There are no registered games</string>
+    <string name="str_removed">All games have been removed</string>
+    <string name="str_noRegGame">There are no registered games</string>
+    <string name="str_passChanged">Password changed</string>
+    <string name="str_PleasEnNewPass">Please Enter New Password</string>
+    <string name="str_PFullAllData">Please full all field</string>
+    <string name="incorrectUserOrPass">The password or username is incorrect</string>
+    <string name="str_PfullALl">Please full all  field</string>
+    <string name="str_theGame">The Game</string>
+    <string name="str_welcome">Welcome....</string>
+    <string name="str_enter_a_number">Enter a Number</string>
+    <string name="str_remember_me">Remember me?</string>
+    <string name="str_P_EnterNum">Please Enter Number</string>
+    <string name="str_P_Click_NGame">Please Click On New Game</string>
+    <string name="str_Qes_Over">Questions are over</string>
+
+    <string-array name="countries">
+        <item>palestine</item>
+        <item>Egypt</item>
+    </string-array>
 </resources>

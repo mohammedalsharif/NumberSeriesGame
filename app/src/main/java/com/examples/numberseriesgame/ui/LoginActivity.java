@@ -2,7 +2,6 @@ package com.examples.numberseriesgame.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -11,12 +10,12 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
 
-import com.examples.numberseriesgame.MainActivity;
 import com.examples.numberseriesgame.R;
+import com.examples.numberseriesgame.Utils.Util;
 
 public class LoginActivity extends AppCompatActivity {
+    public static final String CHECK_BOX_VALUE="CheckBoxValue";
     private ImageView imUser;
     private EditText etUserName, etPassword;
     private Button btnLogin, btnRegister;
@@ -28,16 +27,15 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        setTitle("LoginActivity");
+        setTitle(getResources().getString(R.string.str_Login));
         initViews();
         spLogIn = getSharedPreferences(RegisterActivity.PREF_NAME_USER_REGISTER, MODE_PRIVATE);
         editor = spLogIn.edit();
-        Intent intent = getIntent();
-
-        if (spLogIn.getBoolean("CheckBoxValue", false)) {
+        if (spLogIn.getBoolean(CHECK_BOX_VALUE, false)) {
             startActivity(new Intent(LoginActivity.this, MainActivity.class));
             finish();
         }
+        Intent intent = getIntent();
         if (intent != null) {
             String userName = intent.getStringExtra(RegisterActivity.PREF_KEY_USERNAME);
             String password = intent.getStringExtra(RegisterActivity.PREF_KEY_PASSWORD);
@@ -59,19 +57,19 @@ public class LoginActivity extends AppCompatActivity {
                 String username = etUserName.getText().toString();
                 String userPassword = etPassword.getText().toString();
                 if (username.isEmpty() || userPassword.isEmpty()) {
-                    Toast.makeText(LoginActivity.this, "Please full all field", Toast.LENGTH_SHORT).show();
+                    Util.makeToast(LoginActivity.this, getResources().getString(R.string.str_PFullAllData));
                 } else {
-                    if (username.equals(spLogIn.getString(RegisterActivity.PREF_KEY_USERNAME, "")) &&
-                            userPassword.equals(spLogIn.getString(RegisterActivity.PREF_KEY_PASSWORD, ""))) {
-
+                    String userNameInSP=spLogIn.getString(RegisterActivity.PREF_KEY_USERNAME, "");
+                    String PasswordInSP=spLogIn.getString(RegisterActivity.PREF_KEY_PASSWORD, "");
+                    if (username.equals(username)&&userPassword.equals(PasswordInSP)) {
                         if (cbRemember.isChecked()) {
-                            editor.putBoolean("CheckBoxValue", true);
+                            editor.putBoolean(CHECK_BOX_VALUE, true);
                             editor.apply();
                         }
                         startActivity(new Intent(LoginActivity.this, MainActivity.class));
                         finish();
                     } else {
-                        Toast.makeText(LoginActivity.this, "The password or username is incorrect", Toast.LENGTH_SHORT).show();
+                      Util.makeToast(LoginActivity.this,getResources().getString( R.string.incorrectUserOrPass));
                     }
 
                 }

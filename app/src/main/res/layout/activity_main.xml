@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
+
         android:background="@drawable/shape_score"
         android:orientation="horizontal"
         android:padding="10dp"
@@ -29,18 +30,33 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text="100"
+            android:text="0"
             android:textSize="24sp"
             android:textStyle="bold" />
 
     </LinearLayout>
 
     <TextView
+        android:id="@+id/tv_numQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/shape_game"
+        android:padding="4dp"
+        android:text="0/5"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_NameUser" />
+
+    <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="Welcome...."
+        android:text="@string/str_welcome"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
@@ -81,146 +97,142 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_NameUser">
 
 
+        <TextView
+            android:id="@+id/tv_0to0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="2dp"
+            android:background="@drawable/shape_game"
+            android:gravity="center"
+            android:padding="40dp"
+            android:text="10"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tv_0to0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:background="@drawable/shape_game"
-                android:gravity="center"
-                android:padding="40dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:text="10"
-                android:textColor="@color/black"
-                android:textSize="24dp"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tv_0to1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="2dp"
+            android:background="@drawable/shape_game"
+            android:gravity="center"
+            android:padding="40dp"
+            android:text="15"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tv_0to1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:background="@drawable/shape_game"
-                android:gravity="center"
-                android:padding="40dp"
-                android:text="15"
-                android:textColor="@color/black"
-                android:textSize="24dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tv_0to2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:background="@drawable/shape_game"
-                android:gravity="center"
-                android:padding="40dp"
-                android:text="20"
-                android:textColor="@color/black"
-                android:textSize="24dp"
-                android:textStyle="bold" />
-
+        <TextView
+            android:id="@+id/tv_0to2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="2dp"
+            android:background="@drawable/shape_game"
+            android:gravity="center"
+            android:padding="40dp"
+            android:text="20"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold" />
 
 
+        <TextView
+            android:id="@+id/tv_1to0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="2dp"
+            android:background="@drawable/shape_game"
+            android:gravity="center"
+            android:padding="40dp"
+            android:text="25"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tv_1to0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:background="@drawable/shape_game"
-                android:gravity="center"
-                android:padding="40dp"
-                android:text="25"
-                android:textColor="@color/black"
-                android:textSize="24dp"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tv_1to1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="2dp"
+            android:background="@drawable/shape_game"
+            android:gravity="center"
+            android:padding="40dp"
+            android:text="@string/str_Question"
+            android:textColor="@color/red"
+            android:textSize="24dp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tv_1to1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:background="@drawable/shape_game"
-                android:gravity="center"
-                android:padding="40dp"
-                android:text="@string/str_Question"
-                android:textColor="@color/red"
-                android:textSize="24dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tv_1to2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:background="@drawable/shape_game"
-                android:gravity="center"
-                android:padding="40dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:text="35"
-                android:textColor="@color/black"
-                android:textSize="24dp"
-                android:textStyle="bold" />
-
+        <TextView
+            android:id="@+id/tv_1to2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="2dp"
+            android:background="@drawable/shape_game"
+            android:gravity="center"
+            android:padding="40dp"
+            android:text="35"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold" />
 
 
-            <TextView
-                android:id="@+id/tv_2to0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:background="@drawable/shape_game"
-                android:gravity="center"
-                android:padding="40dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:text="40"
-                android:textColor="@color/black"
-                android:textSize="24dp"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tv_2to0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="2dp"
+            android:background="@drawable/shape_game"
+            android:gravity="center"
+            android:padding="40dp"
+            android:text="40"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tv_2to1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:background="@drawable/shape_game"
-                android:gravity="center"
-                android:padding="40dp"
-                android:text="45"
-                android:textColor="@color/black"
-                android:textSize="24dp"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tv_2to1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="2dp"
+            android:background="@drawable/shape_game"
+            android:gravity="center"
+            android:padding="40dp"
+            android:text="45"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tv_2to2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:background="@drawable/shape_game"
-                android:gravity="center"
-                android:padding="40dp"
-                android:text="45"
-                android:textColor="@color/black"
-                android:textSize="24dp"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tv_2to2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="2dp"
+            android:background="@drawable/shape_game"
+            android:gravity="center"
+            android:padding="40dp"
+            android:text="45"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold" />
 
 
     </GridLayout>
@@ -242,7 +254,7 @@
             android:layout_marginStart="20dp"
             android:layout_weight="1"
             android:background="@drawable/shape_score"
-            android:hint="Enter a Number"
+            android:hint="@string/str_enter_a_number"
             android:inputType="number"
             android:paddingStart="20dp" />
 
@@ -252,8 +264,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="20dp"
-            android:foreground="?android:attr/selectableItemBackground"
             android:background="@drawable/shape_score"
+            android:foreground="?android:attr/selectableItemBackground"
             android:text="@string/str_Check" />
     </LinearLayout>
 

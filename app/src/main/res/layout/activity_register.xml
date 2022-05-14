@@ -4,35 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
-    android:orientation="vertical"
+
     android:fillViewport="true"
+    android:orientation="vertical"
     tools:context=".ui.RegisterActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="16dp"
         android:orientation="vertical">
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/str_Register"
-            android:textColor="@color/black"
-
-            android:textSize="24sp"
-            android:textStyle="bold"
-
-            />
 
         <ImageView
             android:id="@+id/image_User"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
+            android:layout_marginTop="20dp"
             android:src="@drawable/ic_person" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -57,7 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="5dp"
             app:endIconMode="clear_text">
 
@@ -74,7 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="5dp"
             app:endIconMode="clear_text">
 
@@ -91,7 +79,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="5dp"
             app:endIconMode="password_toggle">
 
@@ -103,12 +91,21 @@
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <Spinner
+            android:id="@+id/sp_Countries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:entries="@array/countries" />
+
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="5dp"
             app:endIconMode="clear_text">
 
